@@ -1,0 +1,1180 @@
+@import "vars"
+
+html, body, div, span,
+footer, header, section, article, menu, nav,
+h1, h2, h3, h4, h5, h6,
+p, a,
+address, cite,
+img, object, figure, figcaption,
+ul, li,
+form, label,
+caption
+    margin: 0
+    padding: 0
+    border: 0
+
+a
+    text-decoration: none
+    cursor: pointer
+
+ol, ul
+    list-style-type: none
+
+button, input, textarea
+    line-height: normal
+    text-transform: none
+
+img, object
+    vertical-align: middle
+
+body
+    margin: 0 auto
+    max-width: 1600px
+    font-family: "Lato", sans-serif
+
+.fas
+    cursor: pointer
+
+.padding-site
+    padding-left: calc(50% - 570px)
+    padding-right: calc(50% - 570px)
+
+.center
+    margin: 0 auto
+    max-width: 1140px
+
+.flex
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+
+.header
+  background-color: $colorMain
+  height: 100px
+  line-height: 57px
+  border: 1px solid $colorLight
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17)
+
+.header-l
+  justify-content: left
+
+.logo
+  font-size: 27px
+  font-weight: 300
+  letter-spacing: 0.68px
+  color: $colorDark
+  line-height: 51px
+
+.logo:hover
+  transform: rotate(-1deg)
+
+.logo-img
+  margin-right: 13px
+  width: 59px
+  height: 51px
+
+.letter-red
+  color: $colorRed
+  font-weight: 400
+
+.browse
+  font-weight: 300
+  width: 87px
+  height: 38px
+  outline: 1px solid darken($colorLight, 3%)
+  background-color: darken($colorLight, 13%)
+  background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%)
+  color: $colorDark
+  margin-left: 52px
+  cursor: pointer
+  line-height: 38px
+  text-align: center
+
+.browse
+  font-size: 14px
+
+.browse:hover
+  color: $colorRed
+
+.browse-list
+  width: 262px
+  font-size: 14px
+  font-weight: 400
+  text-align: left
+  line-height: 10px
+  padding-left: 15px
+  background-color: $colorMain
+
+.browse-link
+  width: 262px
+  padding-bottom: 15px
+  box-sizing: border-box
+  user-select: none
+
+.browse-link-big
+  border-bottom: 1px solid darken($colorLight, 3%)
+  padding-top: 15px
+  margin-bottom: 15px
+  font-weight: 500
+
+.browse-link-sm
+  padding-left: 4px
+
+.browse-link-a
+  color: lighten($colorDark, 18%)
+  width: 262px
+  display: block
+
+.browse-link-a:hover
+  color: $colorRed
+
+summary
+  outline: 0
+  user-select: none
+
+summary::-webkit-details-marker
+  display: none
+
+summary::after
+  content: '\25BC'
+  padding-left: 0.5em
+  font-size: 9px
+
+details[open] > summary::after
+  content: '\25B6'
+  vertical-align: bottom
+
+details[open] .browse-list
+  position: fixed
+  background-color: $colorMain
+  z-index: 1
+
+.search-box
+  position: relative
+
+.search
+  float: left
+  height: 38px
+  width: 280px
+  font-size: 14px
+  color: $colorDark
+  box-sizing: border-box
+  border: 1px solid darken($colorLight, 3%)
+  padding-left: 15px
+
+.search1
+  position: relative
+  float: left
+  border: 1px solid darken($colorLight, 3%)
+  width: 38px
+  height: 38px
+  color: darken($colorLight, 3%)
+  text-align: center
+  line-height: 38px
+  box-sizing: border-box
+  background-color: $colorMain
+  cursor: pointer
+
+.fas:focus
+  color: $colorDark
+
+.fa-search
+  color: darken($colorLight, 3%)
+  position: absolute
+  right: 12px
+  top: 12px
+
+
+.fa-search:hover
+  color: $colorDark
+
+
+.header-r
+  justify-content: right
+
+
+.card__dropdown
+  position: relative
+  width: 32px
+  height: 38px
+  line-height: 38px
+  display: block
+  border: 1px solid $colorMain
+
+
+.card__dropdown:hover
+  transform: scale(1.2)
+
+
+.card__dropdown:hover ~ .card__content
+  display: block
+  z-index: 2
+
+
+.card__content
+  position: absolute
+  display: none
+  width: 262px
+  height: 440px
+  border-radius: 5px
+  background-color: $colorMain
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
+  padding: 15px
+  margin-top: 5px
+
+
+.card__content::before
+  content: ' '
+  display: block
+  width: 11px
+  height: 11px
+  position: absolute
+  top: -7px
+  left: 11px
+  transform: rotate(45deg)
+  background-color: $colorMain
+  border-top: 1px solid darken($colorLight, 2%)
+  border-left: 1px solid darken($colorLight, 2%)
+  pointer-events: none
+
+.card__link
+  padding-bottom: 15px
+  border-bottom: 1px solid darken($colorLight, 2%)
+  margin-bottom: 15px
+
+.card____img-s
+  display: block
+  width: 72px
+  height: 85px
+  padding-right: 13px
+
+.card__product
+  color: $colorDark
+  font-size: 12px
+  font-weight: 700
+  line-height: 15px
+  text-transform: uppercase
+
+.card__star
+  color: #e4af48
+  font-size: 12px
+  font-weight: 400
+  line-height: 15px
+
+.card__price
+  color: $colorRed
+  font-size: 12px
+  font-weight: 700
+  text-transform: uppercase
+  line-height: 15px
+
+.card__circle
+  display: block
+  color: darken($colorLight, 6%)
+  font-size: 16px
+  font-weight: 400
+
+.card__link-p
+  color: $colorDark
+  font-size: 16px
+  font-weight: 700
+  text-transform: uppercase
+  padding-bottom: 35px
+  display: block
+
+.card__total
+  float: left
+
+.card__total-n
+  float: right
+
+.card__link-btn
+  display: block
+  box-sizing: border-box
+  margin-top: 35px
+  margin-bottom: 12px
+  width: 225px
+  height: 50px
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  border: 1px solid $colorRed
+  color: $colorRed
+  text-align: center
+
+.card__link-btn:hover
+  color: $colorMain
+  background-color: $colorRed
+
+.card__link-btn1
+  display: block
+  width: 225px
+  height: 50px
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  border: 1px solid darken($colorLight, 1%)
+  color: lighten($colorDark, 16%)
+  text-align: center
+
+.card__link-btn1:hover
+  color: $colorMain
+  background-color: $colorRed
+
+.myAccount
+  height: 38px
+  background-color: $colorRed
+  font-size: 15px
+  font-weight: 400
+  color: $colorMain
+  line-height: 38px
+  margin-left: 26px
+  padding-left: 19px
+  padding-right: 19px
+
+.myAccount:hover
+  background-color: $colorMain
+  color: $colorRed
+  outline: 1px solid $colorRed
+
+.main-menu
+  height: 51px
+  line-height: 51px
+  max-width: 680px
+  margin: 0 auto
+
+.menu-list
+  display: flex
+  justify-content: space-around
+
+.menu-link
+  float: left
+  position: relative
+  font-size: 14px
+  font-weight: 700
+
+.menu-link a
+  color: $colorDark
+
+.menu-link-a:hover
+  font-weight: 900
+  border-bottom: 3px solid $colorRed
+
+.megamenu
+  position: absolute
+  width: 860px
+  display: none
+  background-color: $colorMain
+  border-radius: 5px
+  border: 1px solid darken($colorLight, 2%)
+  margin-top: -7px
+  z-index: 2
+
+.square
+  width: 8px
+  height: 8px
+  transform: rotate(45deg)
+  position: absolute
+  background-color: $colorMain
+  border-left: 1px solid darken($colorLight, 2%)
+  border-top: 1px solid darken($colorLight, 2%)
+  display: none
+  top: 40px
+  left: 20px
+
+.megamenu-block
+  width: 235px
+  padding-left: 25px
+  padding-right: 25px
+  padding-bottom: 25px
+
+.megamenu-h3
+  border-bottom: 1px solid darken($colorLight, 2%)
+  color: lighten($colorDark, 1%)
+  font-size: 14px
+  font-weight: 400
+  line-height: 32px
+  text-transform: uppercase
+  text-align: left
+  margin-bottom: 10px
+  margin-top: 10px
+
+.megamenu-link
+  color: ($colorDark, 26%)
+  font-size: 14px
+  font-weight: 400
+  line-height: 28px
+  text-align: left
+  margin-left: 4px
+
+.megamenu-link-a
+  width: 235px
+  display: block
+
+.megamenu-link-a:hover
+  color: $colorRed
+
+.megamenu-img
+  display: block
+  width: 235px
+  margin-top: 25px
+
+.link-home
+  position: relative
+
+.link-home:hover .menu-home
+  display: block
+  left: -120px
+
+.link-home:hover .square
+  display: block
+
+.link-men
+  position: relative
+
+.link-men:hover .menu-men
+  display: block
+  left: -180px
+
+.link-men:hover .square
+  display: block
+  z-index: 1
+
+.link-women
+  position: relative
+
+.link-women:hover .menu-women
+  display: block
+  left: -260px
+
+.link-women:hover .square
+  display: block
+  z-index: 1
+
+.link-kids
+  position: relative
+
+.link-kids:hover .menu-kids
+  display: block
+  right: -470px
+
+.link-kids:hover .square
+  display: block
+  z-index: 1
+
+.link-assoseries
+  position: relative
+
+.link-assoseries:hover .menu-accoseriese
+  display: block
+  right: -345px
+
+.link-assoseries:hover .square
+  display: block
+  z-index: 1
+
+.link-featured
+  position: relative
+
+.link-featured:hover .menu-featured
+  display: block
+  right: -220px
+
+.link-featured:hover .square
+  display: block
+  z-index: 1
+
+.link-deals
+  position: relative
+
+.link-deals:hover .menu-deals
+  display: block
+  right: -120px
+
+.link-deals:hover .square
+  display: block
+  z-index: 1
+
+.arrivals
+  height: 148px
+  background-color: lighten($colorRed, 90%)
+
+.arrivals-h3
+  color: $colorRed
+  font-size: 24px
+  font-weight: 400
+  line-height: 20px
+  text-align: left
+  text-transform: uppercase
+
+.breadcrumps
+  height: 11px
+  font-size: 14px
+  line-height: 20px
+  text-align: right
+  text-transform: uppercase
+  font-weight: 300
+
+.breadcrumbs-current
+  display: inline-block
+  color: $colorRed
+  font-weight: 700
+
+
+.breadcrumps-a
+  color: lighten($colorDark, 26%)
+
+
+.breadcrumps-a:hover
+  color: $colorRed
+  font-weight: 700
+
+
+.brand
+    height: 610px
+    background-color: darken($colorLight, 2%)
+
+.brand-content
+    max-width: 555px
+    font-size: 40px
+    font-weight: 400
+    color: $colorDark
+    border-left: 12px solid $colorRed
+    padding-left: 12px
+    margin-top: 225px
+    margin-bottom: 279px
+
+.brand-content-big
+    font-size: 60px
+    letter-spacing: 1.5px
+    padding-bottom: 20px
+    line-height: 47px
+
+.brand-content-small
+    letter-spacing: 1px
+    line-height: 39px
+
+.brand-content-red
+    color: $colorRed
+    letter-spacing: 1px
+
+.brand-img
+    max-width: 582px
+
+.offers
+    padding-top: 100px
+
+.offers-l, .offers-r
+    flex-direction: column
+
+.offers-b, .offers-s
+    padding-bottom: 20px
+
+.offers-0
+    position: relative
+
+.offers-1
+    position: absolute
+    top: 26px
+    padding: 16px 20px
+    background-color: $colorMain
+    height: 50px
+    font-size: 18px
+    font-weight: 400
+    letter-spacing: 0.45px
+
+.offers-1-a
+    color: $colorDark
+
+.offers-1-red
+    color: $colorRed
+    font-size: 30px
+    letter-spacing: 0.75px
+
+.offers-1:hover
+    background-color: $colorRed
+
+.offers-1:hover .offers-1-a
+    color: $colorMain
+
+.offers-1:hover .offers-1-red
+    color: $colorMain
+
+.futured
+    text-align: center
+
+.futuredh2
+    color: $colorDark
+    font-size: 30px
+    font-weight: 700
+    line-height: 54px
+    padding-top: 100px
+    padding-bottom: 16px
+
+.futuredh6
+    color: lighten($colorDark, 49%)
+    font-size: 14px
+    font-weight: 400
+    padding-bottom: 60px
+
+.goods-item
+    position: relative
+    width: 261px
+    margin-bottom: 40px
+
+.goods-item:hover
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
+
+
+.goods-item:hover .goods-photo-a
+    filter: brightness(50%)
+
+
+.goods-item:hover .add
+    display: block
+    background-color: inherit
+
+
+.goods-photo-a
+    display: block
+    background-color: darken($colorLight, 2%)
+
+
+.goods-img
+    width: 100%
+
+
+.goods-text
+    text-align: left
+    padding: 19px 14px 21px 14px
+
+
+.goodsname
+    color: $colorDark
+    font-size: 13px
+    font-weight: 400
+    text-transform: uppercase
+    padding-bottom: 16px
+
+
+.goodsprice
+    color: $colorRed
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+
+
+.add
+    position: absolute
+    display: none
+    top: 98px
+    left: 70px
+    width: 123px
+    height: 39px
+    font-size: 13px
+    font-weight: 700
+    color: $colorMain
+    line-height: 39px
+    text-align: center
+    border: 1px solid $colorMain
+    background-color: $colorMain
+
+.card-img
+    color: $colorMain
+
+.allProduct
+    display: block
+    width: 212px
+    height: 48px
+    background-color: $colorRed
+    font-size: 16px
+    font-weight: 700
+    color: $colorMain
+    text-align: center
+    line-height: 48px
+    margin: 0 auto 115px auto
+
+.allProduct:hover
+    color: $colorRed
+    background-color: $colorMain
+    outline: 1px solid $colorRed
+
+.advantages
+    max-width: 1140px
+    height: 529px
+    background-image: url("images/Layer39.png"), url(images/Layer38.jpg)
+    background-repeat: no-repeat
+    background-color: $colorDark
+    margin: 0 auto 115px auto
+
+
+.word-red
+    color: $colorRed
+
+.advantages-a:hover .advantages-lh2
+    color: $colorRed
+
+.advantages-a:hover .advantages-lh3
+    color: $colorRed
+
+.advantages-a:hover .word-red
+    color: $colorMain
+
+.advantages-l
+    float: left
+    width: 50%
+    padding: 140px 0 0 40px
+
+.advantages-l a
+    color: $colorMain
+
+.advantages-lh2
+    font-size: 54px
+    font-weight: 700
+
+.advantages-lh3
+    font-size: 32px
+    font-weight: 700
+
+.advantages-r
+    float: right
+    width: 370px
+
+.advantages-r-items
+    height: 130px
+    display: flex
+    flex-direction: column
+    padding-top: 30px
+
+.advantages-r a
+    color: darken($colorMain, 2%)
+    font-size: 20px
+    font-weight: 700
+    text-align: left
+    letter-spacing: 0.5px
+
+.advantages-img
+    padding-left: 30px
+    padding-right: 30px
+
+.advantages-r p
+    width: 219px
+    color: darken($colorMain, 2%)
+    font-size: 14px
+    font-weight: 300
+    text-align: left
+    margin: 0 0 0 100px
+
+.advantages-ra:hover
+    color: $colorRed
+
+.reviews
+    background-image: url("images/layer41a.png"),url("images/Layer41.jpg")
+    height: 438px
+    align-items: start
+
+.custumersReviews
+    width: 568px
+    position: relative
+    border-right: 1px solid $colorMain
+    justify-content: left
+
+.photo41
+    display: block
+    height: 83px
+    width: 83px
+    padding-right: 28px
+    padding-top: 111px
+    place-self: self-start
+
+.reviewsContent
+    width: 386px
+    flex-direction: column
+    padding-top: 123px
+
+.comments
+    height: 68px
+    padding-bottom: 19px
+    color: $colorDark
+    font-size: 16px
+    font-style: italic
+    line-height: 26px
+
+.custumersname
+    color: $colorRed
+    font-size: 16px
+    font-weight: 700
+    letter-spacing: 0.4px
+    place-self: start
+
+.custumersadd
+    color: $colorDark
+    font-size: 12px
+    font-weight: 300
+    letter-spacing: 0.3px
+
+.pag
+    position: absolute
+    top: 285px
+    left: 110px
+
+.pag1
+    display: block
+    width: 38px
+    height: 4px
+    background-color: darken($colorLight, 23%)
+    margin-right: 12px
+    float: left
+
+.pag1:hover
+    background-color: $colorRed
+
+.subscription
+    border-left: 1px solid $colorMain
+    flex-direction: column
+    width: 568px
+
+.sub-h2
+    text-align: center
+    padding-top: 148px
+    padding-bottom: 12px
+    font-size: 24px
+    letter-spacing: 0.6px
+    font-weight: 400
+
+.sub-h5
+    text-align: center
+    padding-bottom: 35px
+    color: $colorDark
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 0.35px
+
+.sub-f
+    height: 46px
+    font-size: 14px
+    font-weight: 400
+    justify-content: center
+
+#e-mail
+    padding-left: 25px
+    width: 282px
+    height: 46px
+    border-top-left-radius: 23px
+    border-bottom-left-radius: 23px
+    background-color: darken($colorLight, 5%)
+    user-select: none
+    outline: none
+    border: none
+
+.sub-button
+    width: 104px
+    height: 46px
+    border-bottom-right-radius: 23px
+    border-top-right-radius: 23px
+    background-color: $colorRed
+    color: $colorMain
+    cursor: pointer
+    user-select: none
+    outline: none
+    border: none
+
+.sub-button:hover
+    background-color: white
+    color: $colorRed
+    border: 1px solid $colorRed
+
+.footer-information
+    padding-top: 100px
+    padding-bottom: 90px
+
+.inf-box
+    display: flex
+    flex-direction: column
+
+.inf-content
+    display: block
+    padding-top: 30px
+    width: 427px
+    color: lighten($colorDark, 41%)
+    font-weight: 300
+    line-height: 24px
+
+.inf-h3
+    padding-bottom: 45px
+    padding-top: 25px
+    color: $colorRed
+    font-size: 18px
+    font-weight: 700
+
+.inf-link
+    font-size: 16px
+    font-weight: 400
+    line-height: 47px
+
+.inf-link a
+    color: lighten($colorDark, 41%)
+
+.inf-link:hover
+    font-weight: 700
+
+.footer-lower
+    height: 79px
+    background-color: darken($colorLight, 3%)
+    flex-direction: row
+
+.cpr
+    color: lighten($colorDark, 35%)
+    font-size: 16px
+    font-weight: 400
+    line-height: 79px
+
+.social-list
+    width: 192px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.social-link
+    width: 32px
+    height: 32px
+    background-color: $colorMain
+    text-align: center
+    line-height: 32px
+
+.social-link a
+    color: lighten($colorDark, 57%)
+    font-size: 16px
+    font-weight: 400
+
+.social-link:hover
+    background-color: $colorRed
+
+.social-link a:hover
+    color: $colorMain
+
+    // page PRODUCT
+.page-img-big
+    height: 777px
+    border: 1px solid darken($colorLight, 1%)
+    background-color: darken($colorMain, 3%)
+
+.img-big
+    display: block
+    height: 690px
+
+.sort
+    width: 1140px
+    margin-top: -100px
+    margin-bottom: 119px
+    z-index: 1
+    padding-left: 230px
+    &__container
+       flex-direction: column
+       border: 1px solid darken($colorLight, 1%)
+       background-color: $colorMain
+    &__catalog
+       font-size: 14px
+       font-weight: 700
+       text-align: center
+       text-transform: uppercase
+       padding-top: 73px
+       padding-bottom: 14px
+       border-bottom: 1px solid darken($colorLight, 1%)
+       margin-bottom: 14px
+    &__catalog:hover
+       border-bottom: 3px solid  $colorRed
+    &__catalog-a
+       color: $colorRed
+    &__h3
+       color: lighten($colorDark, 17%)
+       font-size: 18px
+       font-weight: 400
+       line-height: 24px
+       text-align: center
+       text-transform: uppercase
+    &__text
+       width: 618px
+       padding-top: 67px
+       padding-bottom: 28px
+    &__materials
+        color: lighten($colorDark, 60%)
+        font-size: 14px
+        font-weight: 700
+        line-height: 24px
+        text-align: center
+        text-transform: uppercase
+    &__materials-l
+        padding-right: 44px
+    &__materials-1
+        color: lighten($colorDark, 5%)
+    &__price
+        padding-top: 37px
+        color: $colorRed
+        font-size: 24px
+        font-weight: 700
+        padding-bottom: 47px
+    &__hr
+        width: 642px
+        border: 1px solid darken($colorLight, 1%)
+    &__filter-box
+        padding-top: 60px
+        padding-bottom: 28px
+        width: 537px
+    &__filter
+        width: 144px
+    &__filter-h3
+       color: lighten($colorDark, 5%)
+       font-size: 14px
+       font-weight: 700
+       line-height: 24px
+       text-transform: uppercase
+       padding-bottom: 16px
+    &__dropdown
+        position: relative
+    &__dropdown:hover .sort__content
+        display: flex
+        flex-direction: column
+        right: 5px
+    &__dropdown:hover .sort__dropbtn
+        color: $colorRed
+        border: 1px solid $colorRed
+    &__dropbtn
+        color: lighten($colorDark, 61%)
+        padding: 10px
+        font-size: 13px
+        cursor: pointer
+        width: 144px
+        height: 35px
+        box-sizing: border-box
+        border: 1px solid darken($colorLight, 1%)
+        background-color: $colorMain
+        text-align: left
+    &__color
+        width: 11px
+        height: 11px
+    &__color-r
+        color: $colorRed
+    &__color-b
+        color: $colorDark
+    &__color-g
+        display: inline-block
+        color: darken($colorLight, 1%)
+    &__content
+        position: absolute
+        display: none
+        z-index: 1
+        background-color: $colorMain
+        border: 1px solid darken($colorLight, 1%)
+    &__link
+        display: block
+        width: 140px
+        height: 35px
+        line-height: 35px
+        border: 1px solid darken($colorLight, 1%)
+        padding-left: 15px
+    &__link:hover
+        border: 1px solid $colorRed
+    &__add-cart
+        width: 537px
+        height: 55px
+        border: 1px solid $colorRed
+        background-color: $colorMain
+        margin-bottom: 122px
+        font-size: 11px
+        font-weight: 700
+        text-align: center
+        line-height: 55px
+        color: $colorRed
+    &__add-cart:hover
+        background-color: $colorRed
+        color: $colorMain
+    &__.add-cart-imgw
+        display: none
+    &__add-cart:hover .add-cart-imgw
+        display: inline-block
+    &__add-cart:hover .add-cart-img
+        display: none
+
+.like
+    &__dh2
+        font-size: 24px
+        font-weight: 400
+        color: lighten($colorDark, 17%)
+        line-height: 20px
+        text-align: center
+        text-transform: uppercase
+        padding-bottom: 72px
+    &__item
+        position: relative
+        width: 261px
+        margin-bottom: 73px
+    &__item:hover
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
+    &__item:hover .like__photo-a
+        filter: brightness(50%)
+    &__item:hover .add
+        display: block
+        background-color: inherit
+    &__photo-a
+        display: flex
+        justify-content: center
+        width: 261px
+        height: 280px
+        background-color: darken($colorLight, 2%)
+    &__img
+        height: 100%
+        text-align: center
+        line-height: 280px
+    &__text
+        text-align: left
+        padding: 19px 14px 21px 14px
+    &__name
+        color: lighten($colorDark, 30%)
+        font-size: 14px
+        font-weight: 400
+        text-transform: uppercase
+        padding-bottom: 16px
+    &__price
+        color: $colorRed
+        font-size: 16px
+        font-weight: 700
+        text-transform: uppercase
+    &__add-cart
+        display: none
+        position: absolute
+        top: 98px
+        left: 70px
+        width: 123px
+        height: 39px
+        font-size: 13px
+        font-weight: 700
+        color: $colorMain
+        line-height: 39px
+        text-align: center
+        border: 1px solid $colorMain
+        background-color: $colorMain
+    &__cart-img
+        color: $colorMain
+
+.category
+    flex-direction: column
+    &__box
+        font-size: 14px
+        font-weight: 300
+        width: 243px
+        height: 37px
+        outline: 1px solid darken($colorLight, 3%)
+        background-color: darken($colorLight, 3%)
+        background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%)
+        color: $colorDark
+        margin-left: 52px
+        cursor: pointer
+        line-height: 38px
+        text-align: center
+
+
+
+  
+
