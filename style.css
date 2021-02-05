@@ -32,6 +32,10 @@ button, input, textarea {
   text-transform: none;
 }
 
+img, object {
+  vertical-align: middle;
+}
+
 body {
   margin: 0 auto;
   max-width: 1600px;
@@ -751,11 +755,6 @@ input:focus-within {
 
 .offers-l, .offers-r {
   flex-direction: column;
-  flex-grow: 1;
-}
-
-.offers-center {
-  margin: auto 10px;
 }
 
 .offers-b, .offers-s {
@@ -809,7 +808,7 @@ input:focus-within {
 }
 
 .futured {
-  flex-direction: column;
+  text-align: center;
 }
 
 .futuredh2 {
@@ -917,29 +916,37 @@ input:focus-within {
 
 .advantages {
   max-width: 1140px;
-  min-height: 529px;
+  height: 529px;
+  background-image: url("images/Layer39.png"), url(images/Layer38.jpg);
   background-repeat: no-repeat;
   background-color: #222222;
-  margin-bottom: 97px;
-}
-
-.advantages-l {
-  max-width: 767px;
-  min-height: 529px;
-  flex-grow: 1;
-  align-self: flex-start;
-}
-
-.advantages-a {
-  flex-direction: column;
-  align-self: flex-start;
-  padding-top: 98px;
-  padding-left: 39px;
-  color: #ffffff;
+  margin: 0 auto 115px auto;
 }
 
 .word-red {
   color: #f16d7f;
+}
+
+.advantages-a:hover .advantages-lh2 {
+  color: #f16d7f;
+}
+
+.advantages-a:hover .advantages-lh3 {
+  color: #f16d7f;
+}
+
+.advantages-a:hover .word-red {
+  color: #ffffff;
+}
+
+.advantages-l {
+  float: left;
+  width: 50%;
+  padding: 140px 0 0 40px;
+}
+
+.advantages-l a {
+  color: #ffffff;
 }
 
 .advantages-lh2 {
@@ -953,44 +960,40 @@ input:focus-within {
 }
 
 .advantages-r {
-  max-width: 372px;
-  flex-direction: column;
-  padding-left: 42px;
-  padding-right: 36px;
-  padding-top: 48px;
+  float: right;
+  width: 370px;
 }
 
-.advantages-r-item {
-  color: #fafafa;
+.advantages-r-items {
+  height: 130px;
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 61px;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.advantages-r a {
+  color: #fafafa;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 0.5px;
 }
 
 .advantages-img {
-  display: block;
-  width: 40px;
-  padding-right: 33px;
-  align-self: start;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-.advantages-text {
-  max-width: 219px;
-  padding-top: 7px;
-  line-height: 24px;
-}
-
-.advantages-r-h5 {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.advantages-r-p {
+.advantages-r p {
+  width: 219px;
+  color: #fafafa;
   font-size: 14px;
   font-weight: 300;
+  text-align: left;
+  margin: 0 0 0 100px;
 }
 
-.advantages-r-item:hover {
+.advantages-ra:hover {
   color: #f16d7f;
 }
 
