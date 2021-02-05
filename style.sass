@@ -1,6 +1,6 @@
 @import "vars"
 
- 
+
 
 html, body, div, span,
 footer, header, section, article, menu, nav,
@@ -29,6 +29,9 @@ ol, ul
 button, input, textarea
   line-height: normal
   text-transform: none
+
+img, object
+  vertical-align: middle
 
 body
   margin: 0 auto
@@ -62,7 +65,7 @@ summary:hover
 summary::-webkit-details-marker
   display: none
 
-details>summary 
+details>summary
   list-style: none
 
 input:focus-within
@@ -109,7 +112,7 @@ input:focus-within
 
     25%
       transform: rotate(90deg) scale(-2)
-      right: 50px 
+      right: 50px
     50%
       transform: rotate(150deg) scale(1.1)
       right: 90px
@@ -117,13 +120,13 @@ input:focus-within
     70%
       transform: rotate(250deg) scale(1.3)
       right: 50px
-      
+
     100%
       transform: rotate(360deg)
 
 .logo:hover .logo-img
   animation: logo-img 2s linear 0s 1 normal
-    
+
 .letter-red
   color: $colorRed
   font-weight: 400
@@ -192,13 +195,13 @@ input:focus-within
 .browse[open] > .browse-det
   position: relative
   color: $colorRed
-  
+
 .browse[open] > .browse-list
   position: absolute
   width: 242px
   background-color: $colorMain
   z-index: 1
-  
+
 .search-box
   position: relative
 
@@ -255,7 +258,7 @@ input:focus-within
 
   &[open] > .mycart__summary
     position: relative
-    
+
   &__content
     border-radius: 5px
     background-color: $colorMain
@@ -366,7 +369,7 @@ input:focus-within
     width: 140px
     background-color: $colorMain
     z-index: 1
-    
+
   &:hover
     background-color: $colorMain
     color: $colorRed
@@ -634,7 +637,7 @@ input:focus-within
   min-height: 610px
   background: url(images/brand.png) no-repeat top right
   background-color: darken($colorLight, 2%)
-  
+
 .brand-content
   max-width: 485px
   font-size: 40px
@@ -662,10 +665,6 @@ input:focus-within
 
 .offers-l, .offers-r
   flex-direction: column
-  flex-grow: 1
-
-.offers-center
-  margin: auto 10px
 
 .offers-b, .offers-s
   padding-bottom: 20px
@@ -710,7 +709,7 @@ input:focus-within
   color: $colorMain
 
 .futured
-  flex-direction: column
+  text-align: center
 
 .futuredh2
   color: $colorDark
@@ -732,10 +731,10 @@ input:focus-within
 
 .goods-item:hover
   box-shadow: 0 0 5px 8px rgba(0, 0, 0, 0.16)
-  
+
 .goods-item:hover .goods-photo-a
   filter: brightness(50%)
-  
+
 .goods-item:hover .add
   display: block
   background-color: inherit
@@ -777,10 +776,10 @@ input:focus-within
   line-height: 39px
   text-align: center
   border: 1px solid $colorMain
- 
+
 .add:hover
   box-shadow: 0 0 2px 2px $colorMain
-  
+
 
 .allProduct
   display: block
@@ -803,27 +802,30 @@ input:focus-within
 
 .advantages
   max-width: 1140px
-  min-height: 529px
+  height: 529px
+  background-image: url("images/Layer39.png"), url(images/Layer38.jpg)
   background-repeat: no-repeat
   background-color: $colorDark
-  margin-bottom: 97px
+  margin: 0 auto 115px auto
 
-.advantages-l
-  max-width: 767px
-  min-height: 529px
-  flex-grow: 1
-  align-self: flex-start
- 
-.advantages-a
-  flex-direction: column
-  align-self: flex-start
-  padding-top: 98px
-  padding-left: 39px
-  color: $colorMain
-  
 .word-red
   color: $colorRed
- 
+
+.advantages-a:hover .advantages-lh2
+  color: $colorRed
+
+.advantages-a:hover .advantages-lh3
+  color: $colorRed
+
+.advantages-a:hover .word-red
+  color: $colorMain
+.advantages-l
+  float: left
+  width: 50%
+  padding: 140px 0 0 40px
+
+.advantages-l a
+  color: $colorMain
 .advantages-lh2
   font-size: 54px
   font-weight: 700
@@ -833,42 +835,36 @@ input:focus-within
   font-weight: 700
 
 .advantages-r
-  max-width: 372px
-  flex-direction: column
-  padding-left: 42px
-  padding-right: 36px
-  padding-top: 48px
-  
-.advantages-r-item
-  color: darken($colorMain, 2%)
+  float: right
+  width: 370px
+
+.advantages-r-items
+  height: 130px
   display: flex
-  justify-content: space-around
-  margin-bottom: 61px
-    
-.advantages-img
-  display: block
-  width: 40px
-  padding-right: 33px
-  align-self: start
-  
-.advantages-text
-  max-width: 219px
-  padding-top: 7px
-  line-height: 24px
+  flex-direction: column
+  padding-top: 30px
 
- 
-
-.advantages-r-h5
+.advantages-r a
+  color: darken($colorMain, 2%)
   font-size: 20px
   font-weight: 700
+  text-align: left
+  letter-spacing: 0.5px
 
-.advantages-r-p
+.advantages-img
+  padding-left: 30px
+  padding-right: 30px
+
+.advantages-r p
+  width: 219px
+  color: darken($colorMain, 2%)
   font-size: 14px
   font-weight: 300
+  text-align: left
+  margin: 0 0 0 100px
 
-.advantages-r-item:hover
+.advantages-ra:hover
   color: $colorRed
-  
 .reviews
   background-image: url("images/layer41a.png"), url("images/Layer41.jpg")
   height: 438px
@@ -1070,7 +1066,7 @@ input:focus-within
 .social-link a:hover
   color: $colorMain
 
-  
+
 // page PRODUCT
 
 .slider
@@ -1129,7 +1125,7 @@ input:focus-within
 
   &__catalog-a:hover
     color: $colorRed
-    
+
   &__catalog-active
     color: $colorRed
 
@@ -1137,7 +1133,7 @@ input:focus-within
     width: 155px
     position: absolute
     top: 103px
-   
+
   &__pag1
     display: block
     width: 51px
@@ -1544,7 +1540,7 @@ input:focus-within
     background-color: $colorMain
     line-height: 28px
     margin: 10px 10px
-    
+
   &__assort-summury
     font-weight: 700
     padding: 0 10px
@@ -1552,7 +1548,7 @@ input:focus-within
     color: lighten($colorDark, 30%)
     background-color: $colorMain
     text-align: center
-    
+
   &__assort-details:hover > .product__assort-summary
     color: $colorRed
 
@@ -1562,7 +1558,7 @@ input:focus-within
   &__assort-details[open] > .product__assort-summary
     color: $colorRed
     position: relative
-   
+
 
   &__assort-details[open] > .product__assort-list
     position: absolute
@@ -1677,7 +1673,7 @@ input:focus-within
   &__box-add:hover
     box-shadow: 0 0 3px 3px $colorMain
     transition: .3s
-    
+
   &__pagination
     width: 855px
     flex-wrap: wrap
@@ -1790,7 +1786,7 @@ input:focus-within
 
   &__arrivals
     margin-bottom: 50px
-    
+
   &__details-forms
     width: 100%
     border: 1px solid transparent
@@ -1883,7 +1879,7 @@ input:focus-within
     padding: 0 20px
     background-color: $colorMain
     border: 1px solid $colorLight
-    
+
   &__register:hover
     box-shadow: 0 0 4px 4px lighten($colorRed, 10%) inset
 
@@ -1906,7 +1902,7 @@ input:focus-within
     transform: scale(1.2)
     color: $colorRed
 
-    
+
 // page SHOPPING CART
 
 .shopping
@@ -1922,11 +1918,11 @@ input:focus-within
     font-size: 13px
     font-weight: 700
     text-transform: uppercase
-    
+
   &__colbig
    width: 120px
    margin-right: 395px
-    
+
   &__col1
     width: 100px
     display: block
@@ -1935,12 +1931,12 @@ input:focus-within
   &__img
     width: 100px
     height: 125px
-    
+
   &__col2
     width: 160px
     margin-right: 230px
     text-align: left
-    
+
   &__name
     padding: 13px 0 38px 0
     color: $colorDark
@@ -1954,7 +1950,7 @@ input:focus-within
   &__color
     color: darken($colorLight, 20%)
     text-transform: capitalize
-    
+
   &__col3
     width: 80px
     margin-right: 95px
@@ -1976,7 +1972,7 @@ input:focus-within
   &__circle
     color: darken($colorLight, 15%)
     font-size: 16px
-    
+
   &__selected
     flex-direction: row
     width: 1140px
@@ -2000,7 +1996,7 @@ input:focus-within
     box-sizing: border-box
     text-transform: uppercase
     margin: 44px 0 63px 0
-    
+
   &__clear
     align-self: flex-start
 
@@ -2015,7 +2011,7 @@ input:focus-within
 
   &__continue:hover
     transform: skewX(35deg)
-  
+
   &__checkout
     width: 1140px
     align-items: flex-start
@@ -2027,7 +2023,7 @@ input:focus-within
     font-size: 16px
     font-weight: 700
     margin-bottom: 22px
-   
+
   &__input
     display: block
     border: 1px solid darken($colorLight, 1%)
@@ -2040,7 +2036,7 @@ input:focus-within
 
   &__input:hover
     box-shadow: 0 0 3px 3px lighten($colorRed, 10%) inset
-  
+
   &__quote, &__coupon
     height: 35px
     text-align: center
@@ -2062,26 +2058,26 @@ input:focus-within
 
   &__quote:hover
     transform: skewX(-35deg)
-    
+
   &__coupon
     padding: 12px 18px
-    
+
   &__qoute:hover
     transform: skewX(35deg)
-  
+
   &__label
     color: darken($colorDark, 13%)
     font-size: 14px
     font-weight: 300
     margin-bottom: 24px
-    
+
   &__end1
     flex-grow: 1
     padding: 41px 43px
     align-self: flex-start
     box-sizing: border-box
     background-color: lighten($colorLight, 3%)
-    
+
   &__h4
     margin: 6px 0 24px
     color: lighten($colorDark, 16%)
@@ -2091,14 +2087,14 @@ input:focus-within
 
   &__h3_total
     text-align: right
-    
+
   &__h3_red
     color: $colorRed
 
   &__hr
     border: 1px solid darken($colorLight, 4%)
     margin: 22px 0 17px
-    
+
   &__total
      display: flex
      text-align: center
@@ -2108,7 +2104,7 @@ input:focus-within
      font-size: 16px
      font-weight: 700
      color: $colorMain
-     padding: 19px 
+     padding: 19px
      margin: 0 auto
      background-color: $colorRed
      border: 1px solid darken($colorLight, 1%)
@@ -2127,5 +2123,5 @@ input:focus-within
   &__continue
      align-self: flex-end
 
-     
+
 
